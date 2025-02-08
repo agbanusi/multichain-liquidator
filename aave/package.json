@@ -1,0 +1,27 @@
+{
+  "name": "simple-liquidator",
+  "version": "1.0.0",
+  "main": "liquidator.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "liquidator:polygon": "hardhat run scripts/liquidation_bot/aave-liquidator-bot.ts --network polygon",
+    "liquidator": "ts-node scripts/liquidation_bot/aave-liquidator-bot.ts",
+    "liquidator:deploy": "hardhat run scripts/deploy_polygon.ts --network polygon"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@compound-finance/sleuth": "^1.0.1-alpha8",
+    "@flashbots/ethers-provider-bundle": "^0.6.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "alchemy-sdk": "^2.9.2",
+    "axios": "^1.7.9",
+    "bignumber.js": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "ethers": "^5",
+    "hardhat": "^2.17.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

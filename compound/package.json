@@ -1,0 +1,26 @@
+{
+  "name": "comet-liquidator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "hardhat compile",
+    "liquidator": "hardhat run scripts/liquidation_bot/index.ts",
+    "liquidator:run:polygon": "hardhat run scripts/liquidation_bot/index.ts --network polygon",
+    "liquidator:run:arbitrum": "hardhat run scripts/liquidation_bot/index.ts --network arbitrum",
+    "liquidator:run:base": "hardhat run scripts/liquidation_bot/index.ts --network base",
+    "liquidator:deploy:polygon": "hardhat run scripts/deploy_polygon.ts --network polygon",
+    "liquidator:deploy:arbitrum": "hardhat run scripts/deploy_arbitrum.ts --network arbtrum",
+    "liquidator:deploy:base": "hardhat run scripts/deploy_base.ts --network base"
+  },
+  "dependencies": {
+    "@compound-finance/sleuth": "^1.0.1-alpha8",
+    "@flashbots/ethers-provider-bundle": "^0.6.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "alchemy-sdk": "^2.9.2",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.17.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
